@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ManagedUser } from '../types';
 
@@ -35,7 +34,7 @@ const Login: React.FC<LoginProps> = ({ users, onLogin }) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#1C1C1E] p-4 font-sans">
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+      <div className="max-w-md w-full bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-white/5">
         <div className="bg-[#FFD200] p-10 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-black/10"></div>
           <div className="bg-black inline-block p-4 rounded-2xl mb-4 transform -skew-x-12 shadow-xl">
@@ -58,7 +57,7 @@ const Login: React.FC<LoginProps> = ({ users, onLogin }) => {
             <input
               type="text"
               required
-              className="w-full px-5 py-4 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#FFD200]/20 focus:border-[#FFD200] outline-none transition-all font-semibold"
+              className="w-full px-5 py-4 bg-[#1C1C1E] border-2 border-black rounded-2xl focus:ring-4 focus:ring-[#FFD200]/30 focus:border-[#FFD200] outline-none transition-all font-black text-[#FFD200] text-lg caret-[#FFD200] placeholder-zinc-700"
               placeholder="Nesine ID"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -70,7 +69,7 @@ const Login: React.FC<LoginProps> = ({ users, onLogin }) => {
             <input
               type="password"
               required
-              className="w-full px-5 py-4 border-2 border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#FFD200]/20 focus:border-[#FFD200] outline-none transition-all font-semibold"
+              className="w-full px-5 py-4 bg-[#1C1C1E] border-2 border-black rounded-2xl focus:ring-4 focus:ring-[#FFD200]/30 focus:border-[#FFD200] outline-none transition-all font-black text-[#FFD200] text-lg caret-[#FFD200] placeholder-zinc-700"
               placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -80,10 +79,10 @@ const Login: React.FC<LoginProps> = ({ users, onLogin }) => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#1C1C1E] hover:bg-black text-[#FFD200] font-black py-4 px-6 rounded-2xl shadow-2xl shadow-[#FFD200]/10 transition-all flex justify-center items-center space-x-3 text-lg active:scale-95 uppercase tracking-wider"
+            className="w-full bg-[#FFD200] hover:bg-[#ffdf40] text-black font-black py-4 px-6 rounded-2xl shadow-2xl shadow-[#FFD200]/20 transition-all flex justify-center items-center space-x-3 text-lg active:scale-95 uppercase tracking-wider"
           >
             {loading ? (
-              <div className="w-6 h-6 border-4 border-[#FFD200] border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-6 h-6 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
             ) : (
               <>
                 <span>Sisteme Giriş</span>
