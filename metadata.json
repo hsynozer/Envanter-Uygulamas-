@@ -1,0 +1,5 @@
+{
+  "name": "vCenter Server Inventory & Management",
+  "description": "A comprehensive IT inventory management system designed to track servers across multiple vCenters, manage metadata like ownership and backup status, and use AI for infrastructure analysis.",
+  "requestFramePermissions": []
+}
